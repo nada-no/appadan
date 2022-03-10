@@ -1,0 +1,53 @@
+query getAllUsers {
+  users {
+  	userId
+  	userName
+  	email
+  	password
+	}
+}
+
+query getUserById {
+  userId(userId:1) {
+  	userId
+  	userName
+  	email
+  	password
+	}
+}
+
+
+
+
+
+query getAllVideos {
+  videos{
+    idVideo
+    title
+    year
+    type
+	}
+}
+
+query getVideoById {
+  videoId(idVideo:1){
+    idVideo
+    title
+    year
+    type
+	}
+}
+
+
+mutation creoUno{
+  createUser(userName: "Pepito", name: "Pep", surname: "Guardiona", email: "pep@pepi.com", password: "pepe"){
+    name
+  }
+}
+
+mutation lgoin {
+  login(email: "admin@admin.com", password: "admin"){
+    token
+    name
+  }
+}
